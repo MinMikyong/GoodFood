@@ -1,0 +1,245 @@
+/* CSS RESET */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS VARIABLES */
+:root{
+    --navbar-height:59px;
+}
+
+/* navigation bar */
+#navbar{
+    display: flex;
+    align-items: center;   
+    position: relative;
+    top: 0px; 
+    position: sticky;
+    z-index: 1;
+}
+#navbar::before{
+    content: "";
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    
+}
+
+/*Navigation bar: logo and images */
+#logo{
+    margin: 5px 15px;
+}
+#logo img{
+    width: 80px;
+    margin: 1px 1px;
+}
+#logo:hover{
+    cursor: pointer;
+}
+
+/* navigation bar: list styling */
+
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    display: flex;
+    /* text-decoration: none; */
+    font-size: 1.2rem;
+}
+#navbar ul li a{
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 3px 22px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Architects Daughter', cursive;
+    font-weight:lighter;
+}
+#navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+/* Home section edit */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+    top: 0;
+    left: 0;
+}
+#home::before{
+    content: "";
+    background: url("/images/plzbg.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 72%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'New Tegomin', serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Architects Daughter', cursive;
+}
+/* services section */
+
+#services{
+    margin: 15px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid rgb(0, 0, 0);
+    margin: 3px 6px;
+    padding: 34px;
+    border-radius: 23px;
+    background-color: #fef09e;
+    transition: img 0.5s ease-in-out;
+}
+
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+}
+#services .box img:hover{
+    transform: scale(1.1);
+}
+#services .box p{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1rem;
+    /* font-weight: bolder; */
+    
+}
+/* #services{}
+#services{} */
+
+/* client section */
+#client-section{
+    height: 291px;
+    position: relative;
+    transition: img 0.5s ease-in-out;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("/images/pakkabg.jpg") no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 30px;
+}
+
+#client-section img{
+    height: 95px;
+}
+#client-section img:hover{
+    transform: scale(1.1);
+}
+
+/* contact section */
+
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background: url("/images/contact.jpg") no-repeat center center/cover;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    font-family: 'Architects Daughter', cursive;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Architects Daughter', cursive;
+}
+
+
+footer{
+    background-color: rgb(68, 68, 68);
+    color: blanchedalmond;
+    padding: 9px 20px;
+}
+/* utility classes */
+.h-primary{
+    font-size: 2.8rem;
+    font-weight: bolder;
+    padding: 12px;
+    font-family: 'New Tegomin', serif;
+}
+.h-secondary{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 12px;
+    font-family: 'New Tegomin', serif;   
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid rgb(185, 177, 177);
+    background-color: rgb(56, 56, 56);
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    font-size: 1.3rem;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:rgb(41, 41, 41); ;
+}
+
+.center{
+    text-align: center;
+}
